@@ -44,7 +44,7 @@ def rotate(
             pt1[0], pt3[0] = pt3[0], pt1[0]
 
         imgOut = imgRotation[int(pt2[1]):int(pt4[1]), int(pt1[0]):int(pt3[0])]
-        cv2.imwrite(NewimageName, imgOut)  #保存得到的旋转后的矩形框
+        cv2.imwrite(NewimageName, imgOut)  # 保存得到的旋转后的矩形框
         return imgRotation  # rotated image
 
 
@@ -83,7 +83,7 @@ def ReadTxt(directory, last):
                         des = str(des)[2:-2]
                     else:
                         des = str(des)[2:-4]
-                    file = open(NewtxtName, 'w',encoding='utf-8')  # 打开or创建一个新的txt文件
+                    file = open(NewtxtName, 'w', encoding='utf-8')  # 打开or创建一个新的txt文件
                     file.write(des)  # 写入内容信息
                     file.close()
                     # str转float
